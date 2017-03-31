@@ -1,0 +1,26 @@
+{% extends 'templates/app.twig' %}
+
+{% block content %}
+
+<div class="row">
+	
+	<div class="col-md-4">
+		<img src="https://image.freepik.com/free-vector/quiz-background-with-items-in-flat-design_23-2147599082.jpg" alt="" class="thumbail img-responsive">
+	</div>
+
+	<div class ="col-md-8">
+		
+
+		<h3>{{quiz.title}}</h3>
+		
+		{% if quiz.state == "ready" %}
+		
+		<a href="{{path_for('quiz.start', {slug: quiz.slug})}}" class="btn btn-default btn-sm">Start Quiz</a>
+
+		{% else %}
+
+		<a href="#" class="btn btn-default btn-sm">Check Statistic</a>
+		{% endif %}
+	</div>
+</div>
+{% endblock %}
