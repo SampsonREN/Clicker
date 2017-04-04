@@ -19,7 +19,7 @@
 
 		{% else %}
 
-		<a href="#" class="btn btn-default btn-sm">Check Statistic</a>
+		<a href="{{path_for('quiz.stats', {slug: quiz.slug})}}" class="btn btn-default btn-sm">Check Statistic</a>
 		{% endif %}
 	</div>
 </div>

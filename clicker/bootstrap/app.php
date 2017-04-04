@@ -31,7 +31,6 @@ $capsule -> setAsGlobal();
 $capsule -> bootEloquent();
 
 
-
 require __DIR__ . '/../app/routes.php';
 
 $app->add( new \Clicker\Middleware\ValidationErrorMiddleware($container->get(Twig::class)));

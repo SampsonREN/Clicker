@@ -4,7 +4,8 @@
 use Slim\Views\TwigExtension;
 use Slim\Views\Twig;
 use Clicker\Models\Quiz;
-use Clicker\Models\QuizDetail;
+use Clicker\Models\Question;
+use Clicker\Models\Student;
 use Interop\Container\ContainerInterface;
 use function DI\get;
 
@@ -39,8 +40,12 @@ return [
 	},
 
 
-	QuizDetail::class => function (ContainerInterface $c){
-		return new QuizDetail;
+	Question::class => function (ContainerInterface $c){
+		return new Question;
+	},
+
+	Student::class => function (ContainerInterface $c){
+		return new Student;
 	},
 
 	

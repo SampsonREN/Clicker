@@ -1,0 +1,23 @@
+{% extends 'templates/app.twig'%}
+
+{% block content %}
+
+<div class="row">
+
+	<div class="col-md-12">
+		<h3>Quiz Statistics {{quiz.title}}</h3>	
+		<hr>
+
+		{% for question in questions %}	
+
+		{% include 'stats/question/item.twig' with {question: question}%}
+
+		{% endfor %}
+
+	</div>
+</div> 
+
+{% endblock %}
+
+
+	

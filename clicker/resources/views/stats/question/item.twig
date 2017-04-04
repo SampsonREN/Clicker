@@ -1,0 +1,38 @@
+
+
+  <div class="col-md-1 column">
+  </div>
+  <div class="col-md-10 column">
+  
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+            Question #{{question.question_num}}
+          </h3>
+      </div>
+      <div class="panel-body">
+
+      <div class="tab-content">
+      <div class="tab-pane active" id="summary">
+        <div class="row">
+          <div class="col-sm-4">
+            <h4>A. {{question.A_content}} {% if question.answer =='A'%}<span class="glyphicon glyphicon-ok" style="color:green"></span>{% endif %}</h4>
+            <div class="progress" title="No. of active users on-line" data-toggle="tooltip">
+              <div class="progress-bar progress-bar-primary" style="width:40%;"></div>
+            </div>
+            <h4>B. {{question.B_content}} {% if question.answer =='B'%}<span class="glyphicon glyphicon-ok" style="color:green"></span>{% endif %}</h4>
+            <div class="progress" title="No. of code snippets" data-toggle="tooltip">
+              <div class="progress-bar progress-bar-danger" style="width:76%;"></div>
+            </div>
+            <h4>C. {{question.C_content}} {% if question.answer =='C'%}<span class="glyphicon glyphicon-ok" style="color:green"></span>{% endif %}</h4>
+            <div class="progress" title="No. of completed requests" data-toggle="tooltip">
+              <div class="progress-bar progress-bar-success" style="width:60%;"></div>
+            </div>
+            <h4>D. {{question.D_content}} {% if question.answer =='D'%}<span class="glyphicon glyphicon-ok" style="color:green"></span>{% endif %}</h4>
+            <div class="progress" title="No. of pending requests" data-toggle="tooltip">
+              <div class="progress-bar progress-bar-warning" style="width:30%;"></div>
+            </div>
+          </div>
+
+    <div class="col-md-1 column">
+    </div>

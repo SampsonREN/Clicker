@@ -1,5 +1,65 @@
 {% extends 'templates/app.twig'%}
 
-Start Quiz
+{% block content %}
+
+<div class="row">
+
+	<div class="col-md-12">
+		<h3>Quiz {{quiz.title}}</h3>	
+		<hr>	
+
+  <div class="col-md-1 column">
+  </div>
+  <div class="col-md-10 column">
 	
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+						Question #{{question.question_num}}
+					</h3>
+      </div>
+      <div class="panel-body">
+
+      	<div>
+          <label>
+            {{question.question_content}}
+          </label>
+        </div>
+        <div>
+          <label>
+            A. {{question.A_content}}
+          </label>
+        </div>
+        <div >
+          <label>
+            B. {{question.B_content}}
+          </label>
+        </div>
+        <div>
+          <label>
+            C. {{question.C_content}}
+          </label>
+        </div>
+        <div>
+          <label>
+           D. {{question.D_content}}
+          </label>
+        </div>
+
+    <div class="col-md-1 column">
+    </div>
+
+		<hr>
+
+		<form action="#" method="post">
+			<button type="submit" class="btn btn-default">Stop</button>
+		</form>
+		
+
+	</div>
+</div> 
+
 {% endblock %}
+
+
+	

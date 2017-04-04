@@ -3,10 +3,11 @@
 namespace Clicker\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Clicker\Models\Question;
 
 
 
-class QuizDetail extends Model{
+class Student extends Model{
 
-	//public $table = 'quiz_details';
+	
 }

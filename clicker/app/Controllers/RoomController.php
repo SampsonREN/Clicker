@@ -4,7 +4,7 @@ namespace Clicker\Controllers;
 
 use Slim\Router;
 use Slim\Views\Twig;
-use Clicker\Models\QuizDetial;
+use Clicker\Models\Question;
 use Psr\Http\Message\ResponseInterface as Response; //Psr\Http\Message\ResponseInterface
 use Psr\Http\Message\ServerRequestInterface as Request;
 
@@ -12,17 +12,22 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 
 class RoomController
 {
-	public function start($slug, Request $request, Response $response, Twig $view, Router $router, QuizDetail $quizDetail){
+	public function start($slug, Request $request, Response $response, Twig $view, Router $router, Question $question){
 
-			//$quizDetail = $quizDetail -> where('slug',$slug)->first();
+			$question = $question->with('quiz')->where('slug',$slug)->first(); //first question of the quiz
 
-			//if(!$quiz){
-			//	return $response -> withRedirect($router->pathFor('home'));
-			//}
+			if(!$question){
+				return $response -> withRedirect($router->pathFor('home'));
+			}
+
+
+			
+		
 
 			return $view->render($response, 'room/start.twig',[
-					//'quizDetail' => $quizDetail,
-
+					'question' => $question,
+					'quiz' => $question->quiz,
+				
 				]);
 	}
 }
